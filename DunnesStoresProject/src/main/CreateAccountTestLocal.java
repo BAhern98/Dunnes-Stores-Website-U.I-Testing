@@ -2,6 +2,8 @@ package main;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.net.URL;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,11 +14,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-class CreateAccountTest {
+class CreateAccountTestLocal {
 
 	static WebDriver driver;
 
@@ -26,6 +31,7 @@ class CreateAccountTest {
 		String path = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", path + "\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
+	
 		driver.get("https://www.dunnesstores.com/");
 		driver.manage().window().maximize();
 	}
