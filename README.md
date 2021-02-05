@@ -4,8 +4,8 @@
 
 Test 1
 
-Test if a user cant creat an account if they dont provide an email.
+Test if a user cant create an account if they dont provide an email.
 
 Test 2
 
-Test the search fumction and selecting the first item found.
+Test the search function and selecting the first item found.
